@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import House from '../house/House'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
-
+import './dashboard.css'
 export default class Dashboard extends Component {
     constructor(){
 super()
@@ -45,7 +45,7 @@ deleteHouse = (id) => {
 }
 
     render() {
-        console.log(this.state.houses)
+        
         const mappedHouses = this.state.houses.map((list, index)=>{
             
             return (
@@ -53,11 +53,16 @@ deleteHouse = (id) => {
             )
         })
         return (
-            <div>
-                 
-                <Link to='/wizard'> <button>Add New Property</button></Link>
+            <div className='container'>
+            <div className='dashboard'>
+                <div className='dash'>
+                 <h1>Dashboard</h1>
+                <Link to='/wizard'> <button className='dashBtn'>Add New Property</button></Link>
+                </div>
+                <h1 className='homelist'>Home Listings</h1>
                 {mappedHouses}
                
+            </div>
             </div>
         )
     }

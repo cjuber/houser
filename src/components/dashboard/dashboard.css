@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+.container{
+    background: #afd4c0;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+
+
+}
+.dashboard{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    background: #e5f4ec;
+    width: 60%;
+
+}
+
+.dash{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding: 10px;
+   
+    
+    
+}
+.dash h1{
+    font-size:40px;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 8px;
+    color: #3b5249;
+    margin-right: 10px;
+    padding-left: 0;
+}
+.dashBtn{
+    background-color: #8aea92;
+    border-style: none;
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    width: 150px;
+    height: 65px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding:0;
+}
+.homelist{
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    margin-right: 270px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    }

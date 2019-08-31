@@ -8,9 +8,9 @@ const getHouses =  (req,res) => {
     })
 }
 addHouse = (req,res) => {
-    const {name, address, city, state, zip} = req.body
+    const {name, address, city, state, zip, img, mortgage, rent} = req.body
     const db = req.app.get('db')
-    db.add_house(name,address,city,state,zip).then(() => {
+    db.add_house(name,address,city,state,zip,img,mortgage,rent).then(() => {
         res.status(200).send('all good')
     })
     .catch((err) => {

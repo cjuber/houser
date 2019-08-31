@@ -1,16 +1,34 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
+import store from '../../redux/store'
+import {STEPONENAME, STEPONEADDRESS, STEPONECITY, STEPONESTATE, STEPONEZIP} from '../../redux/reducer'
+import './wizardOne.css'
 
 export default class WizardOne extends Component {
     constructor(){
         super()
+        const reduxState = store.getState()
         this.state={
-            name: '',
-            address: '',
-            city: '',
-            state: '',
-            zip: ''
+            name: reduxState.name,
+            address: reduxState.address,
+            city: reduxState.city,
+            state: reduxState.state,
+            zip: reduxState.zip,
+            img:reduxState.img
         }
+    }
+
+    componentDidMount(){
+        store.subscribe(()=>{
+            const reduxState = store.getState()
+            this.setState({
+            name: reduxState.name,     
+            address: reduxState.address,
+            city: reduxState.city,
+            state: reduxState.state,
+            zip: reduxState.zip
+            })
+        })
     }
     handleNameUpdate = (e) => {
         this.setState({
@@ -37,11 +55,39 @@ export default class WizardOne extends Component {
             zip: e
         })
     }
+
+    saveStepOne = ()=>{
+           
+        store.dispatch({
+            type: STEPONENAME,
+            payload: this.state.name
+        })
+        store.dispatch({
+            type: STEPONEADDRESS,
+            payload: this.state.address
+        })
+        store.dispatch({
+            type: STEPONECITY,
+            payload: this.state.city
+        })
+        store.dispatch({
+            type: STEPONESTATE,
+            payload: this.state.state
+        })
+        store.dispatch({
+            type: STEPONEZIP,
+            payload: this.state.zip
+        })
+        
+        
+    }
     
     render() {
+        console.log(this.state.img)
         return (
-            <div>
-                <Link exact to = '/'> <button>Cancel</button></Link>
+            <div className="one-container">
+                <div className='list-container'>
+                <div className='mid'>
                 <label>Property Name</label>
                 <input value={this.state.name} onChange={ (e) => this.handleNameUpdate(e.target.value)}></input>
                 <label>Address</label>
@@ -52,7 +98,9 @@ export default class WizardOne extends Component {
                 <input value={this.state.state} onChange={ (e) => this.handleStateUpdate(e.target.value)}></input>
                 <label>Zip</label>
                 <input type="number" value={this.state.zip} onChange={ (e) => this.handleZipUpdate(e.target.value)}></input>
-                <Link to='/wizard/step2'><button>Next Step</button></Link>
+                </div>
+                <Link to='/wizard/step2'><button onClick={() => this.saveStepOne()}>Next Step</button></Link>
+                </div>
             </div>
         )
     }
