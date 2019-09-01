@@ -9,11 +9,7 @@ super()
 
 this.state={
     houses: [],
-    // name: '',
-    // address: '',
-    // city: '',
-    // state: '',
-    // zip: '',
+  
 }
 
     }
@@ -39,7 +35,7 @@ deleteHouse = (id) => {
         this.setState({
           houses: res.data
         })
-        console.log(this.state.houses)
+        this.getHouses()
     })
     
 }

@@ -10,15 +10,19 @@ export default class House extends Component {
             <div className="box">
                <div className="box-left">
                    <img src={img}></img>
-                <p>{name}</p>
-                <p>{address}</p>
-                <p>{city}</p>
-                <p>{state}</p>
-                <p>{zip}</p>
-                <p>{mortgage}</p>
-                <p>{rent}</p>
-                </div> 
-                <button onClick={ () => this.props.deleteHouse(id)}>Delete</button>
+              </div> 
+              <div className="box-mid">
+                <p>Property Name: {name}</p>
+                <p>Address: {address}</p>
+                <p>City: {city}</p>
+                <p>State: {state}</p>
+                <p>Zip: {zip}</p>
+            </div> 
+            <div className='box-right'>
+                <p>Monthly Mortgage{mortgage}</p>
+                <p>Desired Rent: {rent}</p>
+            </div>  
+                <button onClick={ () => this.props.deleteHouse(id)}>x</button>
             </div>
         )
     }

@@ -1,0 +1,25 @@
+.wizdash{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 8vh;
+    background:#afd4c0;
+
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    background:#e5f4ec;
+
+}
+.top button{
+    margin-left: 105px;
+    margin-top: 20px;
+}
+.top h1{
+
+    margin-top: 20px;
+    margin-left: 20px;
+}

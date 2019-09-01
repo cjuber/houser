@@ -1,0 +1,72 @@
+.two-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.two-container h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.monthlym{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+
+}
+
+.monthlym label{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.monthlym input{
+    border: .5px solid #519872;
+    height: 20px;
+    margin-top: 5px;
+    width: 320px;
+}
+
+.monthlyr{
+    display: flex;
+    flex-direction: column;
+    margin-right: 75px;
+    margin-left: 90px;
+    margin-bottom: 20px;
+}
+
+.monthlyr label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.monthlyr input{
+    border: .5px solid #519872;
+    height: 20px;
+    margin-top: 5px;
+    width: 320px;
+}
+.three-buttons{
+    margin-top: 507px;
+}
+.threeprev{
+    background-color: #3b5249;
+    height: 45px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-right: 105px;
+}
+.complete{
+    background-color: #8aea92;
+    height: 45px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    font-size: 20px;
+}

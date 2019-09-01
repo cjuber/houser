@@ -88,18 +88,28 @@ export default class WizardOne extends Component {
             <div className="one-container">
                 <div className='list-container'>
                 <div className='mid'>
-                <label>Property Name</label>
-                <input value={this.state.name} onChange={ (e) => this.handleNameUpdate(e.target.value)}></input>
+                    <div className='propadd'>
+                <label >Property Name</label>
+                <input className='property'value={this.state.name} onChange={ (e) => this.handleNameUpdate(e.target.value)}></input>
                 <label>Address</label>
-                <input value={this.state.address} onChange={ (e) => this.handleAddUpdate(e.target.value)}></input>
+                <input className='address'value={this.state.address} onChange={ (e) => this.handleAddUpdate(e.target.value)}></input>
+                </div>
+                <div className="citystate">
+                <div className='city'>
                 <label>City</label>
                 <input value={this.state.city} onChange={ (e) => this.handleCityUpdate(e.target.value)}></input>
+                </div>
+                <div className='state'>
                 <label>State</label>
                 <input value={this.state.state} onChange={ (e) => this.handleStateUpdate(e.target.value)}></input>
+                </div>
+                </div>
+                <div className='zip'>
                 <label>Zip</label>
                 <input type="number" value={this.state.zip} onChange={ (e) => this.handleZipUpdate(e.target.value)}></input>
                 </div>
-                <Link to='/wizard/step2'><button onClick={() => this.saveStepOne()}>Next Step</button></Link>
+                </div>
+                <Link to='/wizard/step2'><button className='onebutton' onClick={() => this.saveStepOne()}>Next Step</button></Link>
                 </div>
             </div>
         )

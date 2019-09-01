@@ -1,0 +1,42 @@
+.imgurl{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+
+.imgurl input {
+
+    width:300px;
+    border: .5px solid #519872;
+    height: 20px;
+    margin-top: 5px;
+}
+.imgurl label{
+    margin-right: 200px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+}
+.twobuttons{
+    margin-top: 620px;
+
+}
+
+.twoprev{
+    background-color: #3b5249;
+    height: 45px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+    margin-left:50px;
+    margin-right: 100px;
+}
+.twonext{
+    background-color: #3b5249;
+    height: 45px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
+}

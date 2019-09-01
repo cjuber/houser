@@ -6,6 +6,7 @@ import WizardThree from './WizardThree'
 import {Link} from 'react-router-dom'
 import store from '../../redux/store'
 import { CANCEL } from '../../redux/reducer';
+import './wizard.css'
 
 
 
@@ -16,7 +17,7 @@ export default class Wizard extends Component {
         store.dispatch({
             type: CANCEL,
             payload: ''
-            //felt like the payload: '' was easier.  then in reducer action.payload is set for each item.  
+              
         })
     }
 
@@ -24,9 +25,11 @@ export default class Wizard extends Component {
         
         return (
             <div>
+            <div className="wizdash">
             <div className='top'>
                 <h1>Add New Listing</h1>
                 <Link exact to = '/'> <button className='cancel' onClick={() => this.cancel()}>Cancel</button></Link>
+                </div>
                 </div>
            <Switch>
                <Route exact path ='/wizard' component={WizardOne}/>

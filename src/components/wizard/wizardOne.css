@@ -6,10 +6,7 @@
     display:flex;
     justify-content: center;
 }
-.top{
-    display: flex;
 
-}
 
 .top h1{
     font-size: 30px;
@@ -26,7 +23,7 @@
 }
 .list-container{
     background:#e5f4ec;
-    width: 50%;
+    width: 60%;
     height: 100vh;
 }
 .mid{
@@ -35,4 +32,69 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+.mid label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 19px;
+}
+.mid input{
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border: .5px solid #519872;
+    height: 20px;
+}
+
+.propadd{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.property{
+    width: 150px;    
+}
+.address {
+    width: 300px;
+}
+
+.citystate{
+    display: flex;
+    
+}
+.city{
+    display: flex;
+    flex-direction: column;
+}
+
+.city input {
+    margin-right: 50px;
+}
+.state{
+    display: flex;
+    flex-direction: column;
+}
+
+.state input{
+    width: 60px;
+}
+
+.zip{
+    display: flex;
+    flex-direction: column;
+    margin-right: 140px;
+}
+.zip input{
+    width: 100px;
+}
+
+.onebutton {
+    background-color: #3b5249;
+    
+    height: 45px;
+    margin-left: 293px;
+    margin-top: 419px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 20px;
 }

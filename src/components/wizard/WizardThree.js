@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import store from '../../redux/store'
 import {STEPTHREEMORTG, STEPTHREERENT} from '../../redux/reducer'
+import './wizardthree.css'
 
 export default class WizardThree extends Component {
     constructor(){
@@ -82,14 +83,24 @@ export default class WizardThree extends Component {
     }
     render() {
         return (
-            <div>
-                <Link exact to = '/'> <button>Cancel</button></Link>
+            <div className = 'one-container'>
+                <div className='list-container'>
+                 <div className = 'two-container'> 
+                    <h1>Recommended Rent: $0</h1>
+                <div className='monthlym'>             
                 <label>Monthly Mortgage Amount</label>
                 <input  value={this.state.mortgage} onChange={ (e) => this.handleMortgageUpdate(e.target.value)}></input>
+                </div>  
+                <div className='monthlyr'>
                 <label>Desired Monthly Rent</label>
                 <input value={this.state.rent} onChange={ (e) => this.handleRentUpdate(e.target.value)}></input>
-                <Link exact to='/wizard/step2'><button  onClick={() => this.saveStepThree()}>Previous Step</button></Link>
-               <Link exact to='/'> <button onClick = {this.addHouse}>Complete</button></Link>
+                </div> 
+                <div className='three-buttons'>
+                <Link to='/wizard/step2'><button className='threeprev' onClick={() => this.saveStepThree()}>Previous Step</button></Link>
+               <Link exact to='/'><button className='complete' onClick = {this.addHouse}>Complete</button></Link>
+               </div>
+               </div>  
+               </div>
             </div>
         )
     }

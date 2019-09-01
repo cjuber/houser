@@ -3,4 +3,40 @@
     min-height: 150px;
     background: #dedede;
     margin-bottom:25px;
+    display:flex;
+
+}
+
+.box-left{
+    margin: 15px;
+    height: 100px;
+    width: 150px;
+    
+    object-fit: contain;
+}
+
+.box-mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Open Sans', sans-serif;
+}
+.box-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.box-right p {
+    margin-top: 10px;
+}
+.box button{
+    background: none;
+    border: none;
+    width: 50px;
+    height: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    margin: 0;
 }
